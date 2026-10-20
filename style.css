@@ -1,0 +1,185 @@
+
+:root {
+    /* จานสีโทนพาสเทล (Pastel Palette) */
+    --pastel-bg: #f8f6f0;
+    --pastel-card-bg: #ffffff;
+    --pastel-primary: #b3c5d7;
+    --pastel-accent: #d6e2e9;
+    --pastel-navbar: #e8dff5;
+    --pastel-text: #4a4e69;
+    --pastel-link: #6c5ce7;
+    --pastel-hover: #a29bfe;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: var(--pastel-bg);
+    background-image:
+        radial-gradient(ellipse at 12% 8%, rgba(214, 226, 233, 0.68) 0, rgba(214, 226, 233, 0) 34rem),
+        radial-gradient(ellipse at 92% 24%, rgba(232, 223, 245, 0.72) 0, rgba(232, 223, 245, 0) 32rem),
+        radial-gradient(ellipse at 18% 78%, rgba(255, 225, 210, 0.42) 0, rgba(255, 225, 210, 0) 28rem),
+        linear-gradient(145deg, #fbfaf6 0%, #f4f3f7 48%, #f8f6f0 100%);
+    background-attachment: fixed;
+    color: var(--pastel-text);
+    padding-top: 70px;
+    line-height: 1.6;
+    position: relative;
+    isolation: isolate;
+}
+
+/* Soft decorative background accents */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    z-index: -1;
+    pointer-events: none;
+    border-radius: 50%;
+    filter: blur(1px);
+}
+
+body::before {
+    width: 300px;
+    height: 300px;
+    top: 18%;
+    left: -115px;
+    border: 1px solid rgba(179, 197, 215, 0.38);
+    box-shadow: 0 0 0 24px rgba(179, 197, 215, 0.07), 0 0 0 52px rgba(179, 197, 215, 0.045);
+}
+
+body::after {
+    width: 230px;
+    height: 230px;
+    top: 58%;
+    right: -82px;
+    border: 1px solid rgba(214, 198, 235, 0.48);
+    box-shadow: 0 0 0 22px rgba(214, 198, 235, 0.09), 0 0 0 48px rgba(214, 198, 235, 0.05);
+}
+
+/* Navbar Custom Styling */
+.custom-navbar {
+    background-color: var(--pastel-navbar);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.custom-navbar .navbar-brand {
+    color: var(--pastel-text);
+}
+
+.custom-navbar .nav-link {
+    color: var(--pastel-text);
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+}
+
+.custom-navbar .nav-link:hover {
+    color: var(--pastel-link);
+}
+
+/* Header Section */
+.header-section {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+/* รูป Display แบบวงกลม */
+.profile-img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-section h1 {
+    color: var(--pastel-text);
+    font-size: 2.2rem;
+}
+
+.header-section .subtitle {
+    color: #6c757d;
+    font-size: 1.1rem;
+}
+
+.header-section a {
+    color: var(--pastel-link);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.header-section a:hover {
+    text-decoration: underline;
+}
+
+/* เส้นแบ่งย่อหน้า */
+.custom-hr {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent, var(--pastel-primary), transparent);
+    opacity: 0.7;
+    margin: 1.5rem 0;
+}
+
+/* Cards Design Proportioned for Pastel Style */
+.custom-card {
+    border: none;
+    border-radius: 16px;
+    background-color: var(--pastel-card-bg);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+.custom-card h2 {
+    color: var(--pastel-text);
+    border-bottom: 2px solid var(--pastel-accent);
+    padding-bottom: 0.5rem;
+}
+
+.bg-pastel-accent {
+    background-color: var(--pastel-accent);
+}
+
+/* Anchor Link styling inside cards */
+.custom-card a {
+    color: var(--pastel-link);
+    text-decoration: none;
+}
+
+.custom-card a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+.custom-footer {
+    margin-top: 3rem;
+    background-color: var(--pastel-navbar);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 576px) {
+    body::before {
+        width: 210px;
+        height: 210px;
+        top: 14%;
+        left: -110px;
+    }
+
+    body::after {
+        width: 170px;
+        height: 170px;
+        top: 65%;
+        right: -95px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+
